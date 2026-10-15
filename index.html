@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DHA Group - Trang bán hàng</title>
+  <style>
+    /* Reset cơ bản */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: 16px;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffde00, #000); /* vàng sang đen */
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 28px;
+      flex: 1;
+      text-align: left;
+      color: #00aaff; /* xanh dương */
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    header .search-container {
+      flex: 2;
+    }
+
+    header input[type="search"] {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 20px;
+      border: 2px solid #00ff00; /* xanh lá cây */
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    header input[type="search"]:focus {
+      border-color: #ff00ff; /* tím / neon hồng */
+      box-shadow: 0 0 8px #ff00ff;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+    }
+
+    table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.7); /* cam neon */
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    th {
+      background: linear-gradient(90deg, #00aaff, #00ff00); /* xanh dương sang xanh lá */
+      color: white;
+      font-size: 18px;
+    }
+
+    tr:hover {
+      background-color: #ffb6c1; /* hồng nhạt */
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+
+    footer .contact-info,
+    footer .policies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      header .search-container {
+        width: 100%;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DHA Group</div>
+    <div class="search-container">
+      <input type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm" />
+    </div>
+  </header>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá (triệu đồng)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Máy tính</td><td>50</td></tr>
+        <tr><td>Điện thoại</td><td>60</td></tr>
+        <tr><td>Con chuột</td><td>2</td></tr>
+        <tr><td>Bàn phím</td><td>1</td></tr>
+        <tr><td>Tivi</td><td>30</td></tr>
+        <tr><td>Máy lạnh</td><td>22</td></tr>
+        <tr><td>Tai nghe</td><td>3</td></tr>
+        <tr><td>Dây sạc điện thoại</td><td>1</td></tr>
+        <tr><td>Cục sạc dự phòng</td><td>2</td></tr>
+        <tr><td>Remote</td><td>1</td></tr>
+        <tr><td>Camera</td><td>5</td></tr>
+        <tr><td>Ốp lưng</td><td>1</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <div>Số hotline: <strong>0123456789</strong></div>
+      <div>Zalo: <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer">Công ty TNHH DHA</a></div>
+      <div>Facebook: <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Công ty TNHH DHA</a></div>
+      <div>Địa chỉ: Nguyễn Kiệm, Phường Hạnh Thông</div>
+      <div>Email: <a href="mailto:dha@gmail.com">dha@gmail.com</a></div>
+    </div>
+    <div class="policies">
+      <div>• Chính sách đổi trả và hoàn tiền.</div>
+      <div>• Chính sách bảo mật thông tin cá nhân.</div>
+      <div>• Điều kiện giao dịch chung và chính sách vận chuyển, giao nhận.</div>
+    </div>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot Tư Vấn DHA Group</title>
+  <style>
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 320px;
+      max-height: 480px;
+      background: #222;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff00;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+    }
+    #chatbot-header {
+      background: #00aaff;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+    #chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .message {
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .message.user {
+      text-align: right;
+      color: #00ff00;
+    }
+    .message.bot {
+      text-align: left;
+      color: #ffcc00;
+    }
+    #chatbot-input-area {
+      display: flex;
+      border-top: 1px solid #444;
+    }
+    #chatbot-input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 0 0 0 10px;
+      font-size: 14px;
+      outline: none;
+      background: #333;
+      color: white;
+    }
+    #chatbot-send {
+      background: #00aaff;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0 0 10px 0;
+      transition: background 0.3s ease;
+    }
+    #chatbot-send:hover {
+      background: #0088cc;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chatbot">
+  <div id="chatbot-header">DHA Group - Tư Vấn Khách Hàng</div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input-area">
+    <input id="chatbot-input" type="text" placeholder="Nhập câu hỏi của bạn..." autocomplete="off" />
+    <button id="chatbot-send">Gửi</button>
+  </div>
+</div>
+
+<script>
+  const messagesContainer = document.getElementById('chatbot-messages');
+  const inputField = document.getElementById('chatbot-input');
+  const sendButton = document.getElementById('chatbot-send');
+
+  // Các câu trả lời mẫu chi tiết
+  const faqResponses = {
+    "giá máy tính": "Máy tính của chúng tôi có giá 50 triệu đồng. Chúng tôi cam kết chất lượng và bảo hành chính hãng.",
+    "giá điện thoại": "Điện thoại hiện tại có giá 60 triệu đồng với nhiều mẫu mã đa dạng và chế độ bảo hành tốt.",
+    "chính sách đổi trả": "Chính sách đổi trả và hoàn tiền của DHA Group cho phép bạn đổi trả trong vòng 7 ngày nếu sản phẩm có lỗi từ nhà sản xuất.",
+    "chính sách bảo mật": "Chúng tôi cam kết bảo mật thông tin cá nhân của khách hàng tuyệt đối và không chia sẻ cho bên thứ ba.",
+    "vận chuyển": "Chúng tôi có chính sách vận chuyển nhanh chóng, giao nhận tận nơi với phí vận chuyển hợp lý tùy khu vực.",
+    "thời gian giao hàng": "Thời gian giao hàng thường từ 2-5 ngày làm việc tùy theo khu vực và loại sản phẩm.",
+    "hỗ trợ kỹ thuật": "Chúng tôi có đội ngũ hỗ trợ kỹ thuật chuyên nghiệp sẵn sàng giúp bạn 24/7 qua hotline hoặc chat trực tiếp.",
+    "địa chỉ cửa hàng": "Địa chỉ cửa hàng của chúng tôi tại Nguyễn Kiệm, Phường Hạnh Thông, rất mong được đón tiếp bạn.",
+    "hotline": "Bạn có thể gọi đến số hotline 0123456789 để được tư vấn nhanh chóng và chính xác nhất.",
+    "giờ làm việc": "Chúng tôi làm việc từ 8h sáng đến 6h chiều từ thứ 2 đến thứ 7 hàng tuần."
+  };
+
+  // Lời chào đầu tiên
+  function greetUser() {
+    addBotMessage("Xin chào quý khách! Tôi là trợ lý ảo của DHA Group. Tôi có thể giúp gì cho bạn hôm nay?");
+  }
+
+  // Thêm tin nhắn vào khung chat
+  function addMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('message', sender);
+    msgDiv.textContent = text;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function addBotMessage(text) {
+    addMessage(text, 'bot');
+  }
+
+  function addUserMessage(text) {
+    addMessage(text, 'user');
+  }
+
+  // Xử lý câu hỏi và trả lời
+  function handleQuestion(question) {
+    const lowerQ = question.toLowerCase();
+
+    // Tìm câu trả lời phù hợp
+    for (const key in faqResponses) {
+      if (lowerQ.includes(key)) {
+        return faqResponses[key];
+      }
+    }
+
+    // Nếu không biết trả lời
+    return `Rất tiếc tôi chưa thể trả lời câu hỏi này. Quý khách vui lòng liên hệ hotline 0123456789 hoặc đến địa chỉ Nguyễn Kiệm, Phường Hạnh Thông để được hỗ trợ chi tiết hơn.`;
+  }
+
+  // Kiểm tra từ khóa tạm biệt
+  function isGoodbye(text) {
+    const goodbyes = ['tạm biệt', 'cảm ơn', 'bye', 'hẹn gặp lại', 'kết thúc', 'thoát'];
+    const lowerText = text.toLowerCase();
+    return goodbyes.some(word => lowerText.includes(word));
+  }
+
+  // Xử lý gửi tin nhắn
+  function sendMessage() {
+    const userText = inputField.value.trim();
+    if (!userText) return;
+    addUserMessage(userText);
+    inputField.value = '';
+
+    if (isGoodbye(userText)) {
+      addBotMessage("Cảm ơn quý khách đã liên hệ DHA Group. Chúc quý khách một ngày tốt lành! Nếu cần hỗ trợ, vui lòng gọi hotline 0123456789.");
+      return;
+    }
+
+    // Trả lời câu hỏi
+    const answer = handleQuestion(userText);
+    addBotMessage(answer);
+  }
+
+  // Sự kiện nút gửi
+  sendButton.addEventListener('click', sendMessage);
+
+  // Gửi khi nhấn Enter
+  inputField.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  // Khởi tạo lời chào
+  greetUser();
+</script>
+
+</body>
+</html>
